@@ -15,14 +15,14 @@ let server=http.createServer(app) //creating a http server
 let port=process.env.PORT || 8000 //get variable from port (fallback 8000)
 export const io=new Server(server,{
     cors:({
-        origin:"http://localhost:5173", //frontend url
+        origin:"https://profesional-networking-website-frontend.onrender.com", //frontend url
         credentials: true
     })
 }) //using for realtime backend and frontend connection using socket.io
 app.use(express.json()) //to take data from body
 app.use(cookieParser()) // to use cookie parser
 app.use(cors({
-    origin:"http://localhost:5173", //frontend url
+    origin:"https://profesional-networking-website-frontend.onrender.com", //frontend url
     credentials: true // imp to allow data parsing
 }))
 app.get("/",(req,res)=>{
